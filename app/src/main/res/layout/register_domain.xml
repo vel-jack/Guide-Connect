@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg"
+    tools:context="com.hsv.connect.register.RegisterDomain">
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:textColor="#000000"
+        android:textSize="18sp"
+        android:id="@+id/DomTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView3"
+        android:layout_marginStart="38dp"
+        android:layout_marginTop="17dp"
+        android:text="Domain" />
+
+    <Spinner
+        android:id="@+id/domain_spinner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/DomTextView"
+        android:layout_below="@+id/DomTextView"
+        android:layout_marginTop="15dp"
+        android:entries="@array/dom" />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/FieldTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/domain_spinner"
+        android:layout_below="@+id/domain_spinner"
+        android:layout_marginTop="14dp"
+        android:text="Field"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/field_spinner"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/FieldTextView"
+        android:layout_below="@+id/FieldTextView"
+        android:layout_marginTop="15dp"
+        android:entries="@array/field" />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/field_spinner"
+        android:layout_below="@+id/field_spinner"
+        android:layout_marginTop="16dp"
+        android:text="Skills"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/register_skill"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_below="@+id/textView3"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <TextView
+        android:textColor="#000000"
+        android:id="@+id/textView4"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/register_skill"
+        android:layout_below="@+id/register_skill"
+        android:text="Description"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/register_desc"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/textView4"
+        android:layout_below="@+id/textView4"
+        android:ems="10"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:id="@+id/register_domain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/register_desc"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/sign_in"
+        android:text="Register"
+        android:textSize="18sp"
+        android:onClick="registerDomain"/>
+</RelativeLayout>

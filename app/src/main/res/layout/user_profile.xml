@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.hsv.connect.profile.UserProfile"
+    android:background="@drawable/bg">
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        app:srcCompat="@drawable/profbg"
+        android:background="@color/prof_bg_color" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="505dp"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/imageView4">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <TableRow
+                android:background="@color/prof_bg_color"
+                android:gravity="center_horizontal">
+
+                <ImageView
+                    android:id="@+id/user_profile_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/user" />
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_horizontal"
+                android:minHeight="30dp">
+
+                <TextView
+                    android:id="@+id/user_name_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="hari"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="24sp" />
+
+            </TableRow>
+
+            <TableRow
+                android:gravity="center_horizontal"
+                android:minHeight="20dp">
+
+                <TextView
+                    android:id="@+id/user_email_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="harry@gmail.com"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18sp" />
+            </TableRow>
+            <TableRow
+                android:gravity="center_horizontal"
+                android:minHeight="20dp">
+
+                <TextView
+                    android:id="@+id/follow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="0followers/3following"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18sp" />
+            </TableRow>
+            </TableLayout>
+
+
+                <Button
+                    android:id="@+id/find"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/findbg"
+                    android:text="Find"
+                    android:textSize="18sp"
+                    android:layout_marginStart="41dp"
+                    android:layout_marginTop="191dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toEndOf="@+id/user_rating"
+                    android:onClick="findPeople"/>
+
+
+            <TextView
+                android:id="@+id/user_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/find"
+                android:layout_alignBottom="@+id/find"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="44dp"
+                android:background="@drawable/ratingbg"
+                android:gravity="center"
+                android:text="3/5"
+                android:textColor="@android:color/background_dark"
+                android:textSize="24sp" />
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="21dp"
+                android:id="@+id/tableLayout"
+                android:layout_below="@+id/find"
+                android:layout_alignParentStart="true">
+
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:minHeight="40dp">
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="Domain:  "
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/user_dom_p"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:gravity="left"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:text="Engineering"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <TableRow
+                android:layout_height="wrap_content"
+                android:minHeight="40dp">
+                <TextView
+                    android:id="@+id/textView12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Field:  "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/user_field_p"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ellipsize="none"
+                        android:gravity="left"
+                        android:maxLines="100"
+                        android:scrollHorizontally="false"
+                        android:text="CSE"
+                        android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow>
+                <TextView
+                    android:id="@+id/textView13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="Address:  "
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/user_addr_p"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ellipsize="none"
+                    android:gravity="left"
+                    android:maxLines="100"
+                    android:scrollHorizontally="false"
+                    android:textSize="18sp" />
+            </TableRow>
+
+            <TableRow android:gravity="center_horizontal">
+
+                <Button
+                    android:id="@+id/user_logout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:onClick="logoutUser"
+                    android:text="Logout" />
+            </TableRow>
+        </TableLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Connect</string>
+    <string-array name="dom">
+        <item>Engineering</item>
+    </string-array>
+    <string-array name="field">
+        <item>CSE</item>
+    </string-array>
+    <string name="title_activity_list_map">Map</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_find_people">Map</string>
+</resources>
